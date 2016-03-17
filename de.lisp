@@ -30,7 +30,24 @@
 `(if ,condition (progn ,@body)))
 
 (only (> 11 10)
-    (format t "\nbig than 10"))
+    (format t "\nbig than 10")
+    (format t "~%"))
+
+(print 
+(macroexpand-1 '(only (> x 10)
+                      (format t "big than 10")
+                      (format t "~%")))
+)
+
+
+(defmacro avg (&rest args)
+    `(/ (+ ,@args) ,(length args)))
+
+(print 
+(avg 1 2 3 4 5 6 7 8 9)
+)
+
+
 
 
 
