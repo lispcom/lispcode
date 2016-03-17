@@ -23,6 +23,16 @@
 (print `(lst is ,@lst))
 
 
+(print `())
+
+
+(defmacro only (condition &rest body)
+`(if ,condition (progn ,@body)))
+
+(only (> 11 10)
+    (format t "\nbig than 10"))
+
+
 
 
 
