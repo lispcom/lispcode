@@ -1,11 +1,17 @@
-(print (cons 'a 'b))
-(print (list 'a 'b))
+(defparameter *list* (list 4 3 2 1))
+(print *list*)
 
-(setf a (cons 'a 'b))
-(setf b (list 'a 'b))
+(print (sort *list* #'<))
 
-(print (car a))
-(print (car b))
-(print (eql a b))
-(print "-------\n")
+(print 
+    (cadr (list (list 1 2) (list 3 4)))
+)
 
+(print 
+    (cdr (list (list 1 2) (list 3 4)))
+)
+
+
+(print 
+    (mapcar #'(lambda (x) (* 2 x)) (list 1 2 3))
+)
