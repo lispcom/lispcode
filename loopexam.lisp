@@ -1,6 +1,8 @@
-(print (loop for i from 0 to 10 collect i))
+(print 
+    (loop for i from 0 downto -10 collect i)
+)
 
-(defmacro range(n) `(loop for i from 0 to ,n collect i))
 
-(print (range 9))
-
+(print 
+    (loop for i from 0 to 10 collect i)
+)
